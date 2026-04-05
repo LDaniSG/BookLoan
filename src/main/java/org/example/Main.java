@@ -6,13 +6,10 @@ import org.example.exceptions.PrestamoException;
 import org.example.exceptions.ValidationException;
 import org.example.objects.*;
 
-import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
     private static final Scanner scanner = new Scanner(System.in);
@@ -185,7 +182,7 @@ public class Main {
         scanner.nextLine();
         try {
             inventarioPrestamo.devolverEquipo(id);
-            System.out.print("¡Devolución completa!");
+            System.out.println("¡Devolución completa!");
         } catch (DisponibilidadException | PrestamoException e) {
             System.out.println(e.toString());
         }
